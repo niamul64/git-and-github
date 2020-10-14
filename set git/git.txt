@@ -1,0 +1,11 @@
+install git and github .
+go to pycharm settings ->search git ->log in github -> goto git option , where there is a 'test' there we find the git.exe from where it is installed inside bin.
+ goto plugin and search 'vcs' and install the first one. now came to main page . and control git from vcs
+
+
+***********also can install git bash for vscodde********
+
+
+video:from my youtube chanel:
+https://studio.youtube.com/video/BvU1FDoKJXs/edit
+https://studio.youtube.com/video/1y7-WEV1jfw/edit
