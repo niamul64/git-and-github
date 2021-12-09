@@ -1,5 +1,5 @@
 command for git
-### Make directory/folder:</tb> mkdir [folder name]
+### Make directory/folder:*Tabspace*  mkdir [folder name]
 ### See all the file or folder in a directory(for windows):   dir
 ### See all the file or folder in a directory(for ubuntu):    ls
 ### Make file:                                                touch [file name with extension]
