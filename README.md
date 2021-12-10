@@ -9,5 +9,15 @@ command for git
                                                             touch [file name with extension]
 ### initialize a directory as git directory:          
                                                             git init
-################################################################################################
+### change directory:
+                                                            cd [folder name]    
+### go back: root directory:                                          
+                                                            cd ..
 
+
+#############################################################################################
+
+### Cloning an online repository: 
+                                                            git clone [repository URL]
+### see what changed in the directory: 
+                                          git status                                                            
