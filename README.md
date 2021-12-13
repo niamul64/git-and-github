@@ -79,7 +79,7 @@
 #################################################################################   
 # Marging 
 ### Lets assume we have different changes in 'new' branch and 'main' branch (commited changes)
-### first we need to marge 'main' with 'new'.(main--> new) 
+### first we need to merge 'main' with 'new'.(main--> new) 
 ### checkout or switch to 'new': Now we are in "new" branch
                                                             git checkout new
                                                             git merge main -m "[comment]"
@@ -93,7 +93,7 @@
 ### if both 'new' and 'new2' has a file name called '2.txt'
 ###  if 'new' made a change on that file in first line (suppose written : '2' )
 ###  if 'new2' made a change on that file in first line (suppose written : 'two' )
-### Now if we try to marge the it git will throug conflict issue
+### Now if we try to merge the it git will throug conflict issue
 ### Now lets say, we are in 'new' branch, now we are marging with 'new2':(new2--> new)
                                                             git checkout new
                                                             git merge new2 -m "[comment]"
@@ -104,13 +104,13 @@
 =====     --> we can do -->         --> or --> 
 two
 ```
-### now we can make it same and marge again 
+### now we can make it same and merge again 
                                                             git checkout new
                                                             git merge new2 -m "[comment]"
-### then marge main--> new/new2
+### then merge main--> new/new2
                                                             git checkout new
                                                             git merge main -m "[comment]"
-### then finally marge into main. (marge: new-->main)
+### then finally merge into main. (merge: new-->main)
                                                             git checkout main
                                                             git merge new -m "[comment]"
 
@@ -124,6 +124,13 @@ two
                                                             git push origin main
 
 ################################################################################# 
-# fatch
+## fatch 
+                                                            git fatch
+### after fatch we won't see the changes in our local machine 
+### to see the changes in local machine we need to merge
+### so merge:
+                                                            git merge
+### OR WE can simply pull(pull = fatch + merge)
+                                                            git pull
 
 
