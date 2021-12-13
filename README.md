@@ -47,8 +47,9 @@
 ### after deleting a file if I add, and now if I want to Undo the add and I want to take back the deleted file too then:(need to make hard reset '--hard', this is called: reset with hard flag)
                                                             git reset --hard
 #################################################################################
-# commit, upload to github 
-### Commit or upload all files the changes to github: 
+![alt text](overview.png)
+# commit
+### Commit : 
                                                             git commit -m "[comment]"
 ### (Undo commit) take back, stage to local (all changes "reset"):
                                                             git reset HEAD~
@@ -80,8 +81,10 @@
 ### Lets assume we have different changes in 'new' branch and 'main' branch (commited changes)
 ### first we need to marge 'main' with 'new'.(main--> new) 
 ### checkout or switch to 'new': Now we are in "new" branch
+                                                            git checkout new
                                                             git merge main -m "[comment]"
 ### Now, checkout or switch to 'main' branch: Now we are in "main" branch
+                                                            git checkout main
                                                             git merge new -m "[comment]"
  
 #################################################################################   
@@ -92,17 +95,21 @@
 ###  if 'new2' made a change on that file in first line (suppose written : 'two' )
 ### Now if we try to marge the it git will throug conflict issue
 ### Now lets say, we are in 'new' branch, now we are marging with 'new2':(new2--> new)
+                                                            git checkout new
                                                             git merge new2 -m "[comment]"
 ## conflict will appeare: (Now we need to solve the conflicts)
-### now if we stay in 'new' and got to the '2.txt', we will see, someting like this:
+### now if we stay in 'new' and go to the '2.txt', we will see, someting like this:
 ```
-2
-=====
+2                              2                      two
+=====     --> we can do -->         --> or --> 
 two
 ```
 ### now we can make it same and marge again 
+                                                            git checkout new
                                                             git merge new2 -m "[comment]"
 ### then marge main--> new/new2
-                                                            
-### then finally marge into main.
-
+                                                            git checkout new
+                                                            git merge main -m "[comment]"
+### then finally marge into main. (marge: new-->main)
+                                                            git checkout main
+                                                            git merge new -m "[comment]"
