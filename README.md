@@ -38,10 +38,14 @@
                                                             git add *
 ### Add from local directory to to git stage (only selected files):
                                                             git add [file_name.extension]
+                                                            if it won work then put a '.' before file_name
+                                                            git add .[file_name.extension]
 ### Add from local directory to to git stage (only selected files in a perticular folder):
                                                             git add [folder_name/file_name.extension]
+                                                            if it won work then put a '.' before file_name
+                                                            git add .[folder_name/file_name.extension]
 ### Add from local directory to to git stage (only specific extension files):
-                                                            git add [git add *.extension]
+                                                            git add [*.extension]
 ### (undo add) Take back, stage to local directory(all changes "reset"):
                                                             git reset
 ### after deleting a file if I add, and now if I want to Undo the add and I want to take back the deleted file too then:(need to make hard reset '--hard', this is called: reset with hard flag)
