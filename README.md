@@ -1,9 +1,11 @@
 command for git
-### Make directory/folder: 
+### Make directory/ folder: 
                                                             mkdir [folder name]
 ### See all the file or folder in a directory(for windows):
                                                             dir
 ### See all the file or folder in a directory(for ubuntu):        
+                                                            ls
+### See all the file or folder in a directory(for mac):        
                                                             ls
 ### Make file:                                              
                                                             touch [file name with extension]
@@ -15,9 +17,12 @@ command for git
                                                             cd ..
 
 
-#############################################################################################
+#################################################################################
 
 ### Cloning an online repository: 
                                                             git clone [repository URL]
 ### see what changed in the directory: 
-                                          git status                                                            
+                                                            git status 
+#################################################################################
+## Add from local directory to to github
+
