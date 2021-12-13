@@ -113,3 +113,17 @@ two
 ### then finally marge into main. (marge: new-->main)
                                                             git checkout main
                                                             git merge new -m "[comment]"
+
+################################################################################# 
+# push
+### checkout or switch to the branch where we wannet to push:then,
+                                                            git checkout [branchName]
+                                                            git push origin [branch_name]
+### example
+                                                            git checkout main
+                                                            git push origin main
+
+################################################################################# 
+# fatch
+
+
