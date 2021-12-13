@@ -47,7 +47,7 @@
 ### after deleting a file if I add, and now if I want to Undo the add and I want to take back the deleted file too then:(need to make hard reset '--hard', this is called: reset with hard flag)
                                                             git reset --hard
 #################################################################################
-![alt text](overview.png)
+![Screenshot](overview.PNG)
 # commit
 ### Commit : 
                                                             git commit -m "[comment]"
