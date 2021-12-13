@@ -66,5 +66,43 @@
 ### remove folder: recursivly 
                                                             git rm -r [folder_name]   
 #################################################################################   
-# Brancing 
+# Branching 
+### how many branches are there? 
+                                                            git branch
+### create new branch:
+                                                            git branch [branch_name]
+### switch to another branch:
+                                                            git checkout [another_branch_name]
+### switch to main_branch:
+                                                            git checkout main
+#################################################################################   
+# Marging 
+### Lets assume we have different changes in 'new' branch and 'main' branch (commited changes)
+### first we need to marge 'main' with 'new'.(main--> new) 
+### checkout or switch to 'new': Now we are in "new" branch
+                                                            git merge main -m "[comment]"
+### Now, checkout or switch to 'main' branch: Now we are in "main" branch
+                                                            git merge new -m "[comment]"
+ 
+#################################################################################   
+# Marging conflict --> change in same file
+### suppose we have 'main' branch and 'new', 'new2'  branches
+### if both 'new' and 'new2' has a file name called '2.txt'
+###  if 'new' made a change on that file in first line (suppose written : '2' )
+###  if 'new2' made a change on that file in first line (suppose written : 'two' )
+### Now if we try to marge the it git will throug conflict issue
+### Now lets say, we are in 'new' branch, now we are marging with 'new2':(new2--> new)
+                                                            git merge new2 -m "[comment]"
+## conflict will appeare: (Now we need to solve the conflicts)
+### now if we stay in 'new' and got to the '2.txt', we will see, someting like this:
+```
+2
+=====
+two
+```
+### now we can make it same and marge again 
+                                                            git merge new2 -m "[comment]"
+### then marge main--> new/new2
+                                                            
+### then finally marge into main.
 
