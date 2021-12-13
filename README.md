@@ -38,17 +38,22 @@
                                                             git add *
 ### Add from local directory to to git stage (only selected files):
                                                             git add [file_name.extension]
+                                                            if it won work then put a '.' before file_name
+                                                            git add .[file_name.extension]
 ### Add from local directory to to git stage (only selected files in a perticular folder):
                                                             git add [folder_name/file_name.extension]
+                                                            if it won work then put a '.' before file_name
+                                                            git add .[folder_name/file_name.extension]
 ### Add from local directory to to git stage (only specific extension files):
-                                                            git add [git add *.extension]
+                                                            git add [*.extension]
 ### (undo add) Take back, stage to local directory(all changes "reset"):
                                                             git reset
 ### after deleting a file if I add, and now if I want to Undo the add and I want to take back the deleted file too then:(need to make hard reset '--hard', this is called: reset with hard flag)
                                                             git reset --hard
 #################################################################################
-# commit, upload to github 
-### Commit or upload all files the changes to github: 
+![Screenshot](overview.PNG)
+# commit
+### Commit : 
                                                             git commit -m "[comment]"
 ### (Undo commit) take back, stage to local (all changes "reset"):
                                                             git reset HEAD~
@@ -66,5 +71,70 @@
 ### remove folder: recursivly 
                                                             git rm -r [folder_name]   
 #################################################################################   
-# Brancing 
+# Branching 
+### how many branches are there? 
+                                                            git branch
+### create new branch:
+                                                            git branch [branch_name]
+### switch to another branch:
+                                                            git checkout [another_branch_name]
+### switch to main_branch:
+                                                            git checkout main
+#################################################################################   
+# Marging 
+### Lets assume we have different changes in 'new' branch and 'main' branch (commited changes)
+### first we need to merge 'main' with 'new'.(main--> new) 
+### checkout or switch to 'new': Now we are in "new" branch
+                                                            git checkout new
+                                                            git merge main -m "[comment]"
+### Now, checkout or switch to 'main' branch: Now we are in "main" branch
+                                                            git checkout main
+                                                            git merge new -m "[comment]"
+ 
+#################################################################################   
+# Marging conflict --> change in same file
+### suppose we have 'main' branch and 'new', 'new2'  branches
+### if both 'new' and 'new2' has a file name called '2.txt'
+###  if 'new' made a change on that file in first line (suppose written : '2' )
+###  if 'new2' made a change on that file in first line (suppose written : 'two' )
+### Now if we try to merge the it git will throug conflict issue
+### Now lets say, we are in 'new' branch, now we are marging with 'new2':(new2--> new)
+                                                            git checkout new
+                                                            git merge new2 -m "[comment]"
+## conflict will appeare: (Now we need to solve the conflicts)
+### now if we stay in 'new' and go to the '2.txt', we will see, someting like this:
+```
+2                              2                      two
+=====     --> we can do -->         --> or --> 
+two
+```
+### now we can make it same and merge again 
+                                                            git checkout new
+                                                            git merge new2 -m "[comment]"
+### then merge main--> new/new2
+                                                            git checkout new
+                                                            git merge main -m "[comment]"
+### then finally merge into main. (merge: new-->main)
+                                                            git checkout main
+                                                            git merge new -m "[comment]"
+
+################################################################################# 
+# push
+### checkout or switch to the branch where we wannet to push:then,
+                                                            git checkout [branchName]
+                                                            git push origin [branch_name]
+### example
+                                                            git checkout main
+                                                            git push origin main
+
+################################################################################# 
+## fatch 
+                                                            git fatch
+### after fatch we won't see the changes in our local machine 
+### to see the changes in local machine we need to merge
+### so merge:
+                                                            git merge
+### OR WE can simply pull(pull = fatch + merge)
+                                                            git pull
+
 
