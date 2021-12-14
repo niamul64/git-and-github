@@ -137,6 +137,27 @@ two
 ### OR WE can simply pull(pull = fatch + merge)
                                                             git pull
 ################################################################################# 
+# gitignore (files) 
+### name a file '.gitignore' in the root directory.
+### To ignore any file just put the name.ext of that file in the '.gitignore' file.
+                                                            New Text Document.a
+                                                            a.a
+                                                            b.a
+                                                            # git will ignore these files
+### to do comment in this file, add '#' before the line.
+### to ignore all the file which has specific extension ('*' means all)
+                                                            *.[ext]
+### example: suppose we want to ignore all the files with the extension '.log'
+                                                            *.log
+### '*' = all, '.' = ignore,
 
-
-
+# gitignore (directory/ folder)
+### To ignore any folder/ directory just put the name_of_that_folder + '/' in the '.gitignore' file.
+                                                            [folder_name]/
+### Now suppose we have a folder dir at root directory and another at 'static/dir/'
+### if we use:
+                                                            dir/
+### then it will ignore all the folders named 'dir'
+### but if we only want to ignore folders that, at the root directory, then :
+                                                            /dir/
+### now 'static/dir' will be tracked by git
