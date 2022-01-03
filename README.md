@@ -24,6 +24,10 @@
                                                             git clone [repository URL]
 ### see what changed in the directory: 
                                                             git status 
+### see all comments in details: 
+                                                            git log
+### see comments in short
+                                                            git log --oneline
 #################################################################################
 # local working directory to --> stage
 ### if we want too add all to stage--> good practice--> go to root folder and :
