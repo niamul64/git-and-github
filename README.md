@@ -1,5 +1,20 @@
-# command for git:
+### Authentication from terminal:
 
+```
+set global username:
+$ git config --global user.email "niamul64"^C
+set global email:
+$ git config --global user.email "niamulhassan64@gmail.com"
+
+we can check by:
+$ git config -l
+
+befor push to github use the command below to save the username and pass.
+$ git config --global credential.helper cache
+Now when we want to push (add--> commit --> push) it will ask for the github user name and password(auth token)
+We can get auth token for password: github.com--> settings-> devloper --> auth token
+
+```
 ### Make directory/ folder: 
                                                             mkdir [folder name]
 ### See all the file or folder in a directory(for windows):
